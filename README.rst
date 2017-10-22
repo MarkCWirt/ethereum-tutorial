@@ -102,6 +102,9 @@ can be submitted to `ethscan.io <https://ethscan.io>`__ (and perhaps other
 places) so that people can read the source associated with the smart contracts
 you deploy.
 
+Note that this is a Python module/script. You will need Python 3.5+ installed to
+use it.
+
 Next Steps
 ----------
 
