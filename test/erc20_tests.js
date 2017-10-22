@@ -28,8 +28,8 @@ contract('TutorialCoin Contract', accounts => {
 
       let ownersCoins = await coin.balanceOf.call(accounts[0]);
       let giftedCoins = await coin.balanceOf.call(accounts[1]);
-      assert.equal(ownersCoins.valueOf(), 50, "Coins balance shoud be reduced appropriately on transfer");
-      assert.equal(giftedCoins.valueOf(), 50, "Coins balance shoud be increased appropriately on transfer");
+      assert.equal(ownersCoins.valueOf(), 50, "Coins balance should be reduced appropriately on transfer");
+      assert.equal(giftedCoins.valueOf(), 50, "Coins balance shout be increased appropriately on transfer");
     });
 
     it("should not allow a user to transfer more coins than they have", async () => {
@@ -64,7 +64,7 @@ contract('TutorialCoin Contract', accounts => {
       assert.equal(allowance.valueOf(), approvalLimit, "Allowance should correspond to approval limit");
       await coin.transferFrom(accounts[1], accounts[2], coinsToTransfer, {from: accounts[0]});
       let giftedCoins = await coin.balanceOf.call(accounts[2]);
-      assert.equal(giftedCoins.valueOf(), coinsToTransfer, "Coins balance shoud be increased appropriately on third-party transfer");
+      assert.equal(giftedCoins.valueOf(), coinsToTransfer, "Coins balance should be increased appropriately on third-party transfer");
 
       // It should fail if someone who is not approved attempt the transfer.
 
@@ -81,12 +81,12 @@ contract('TutorialCoin Contract', accounts => {
 
        coin.transferFrom(accounts[1], accounts[3], coinsToTransfer, {from: accounts[0]});
        giftedCoins = await coin.balanceOf.call(accounts[3]);
-       assert.equal(giftedCoins.valueOf(), coinsToTransfer, "Coins balance shoud be increased appropriately on third-party transfer");
+       assert.equal(giftedCoins.valueOf(), coinsToTransfer, "Coins balance should be increased appropriately on third-party transfer");
 
        // Account 1 should now have 50 coins.
 
        let payersCoins = await coin.balanceOf.call(accounts[1]);
-       assert.equal(payersCoins.valueOf(), 50, "Coins balance shoud be appropriately set for payer in third-party transfer");
+       assert.equal(payersCoins.valueOf(), 50, "Coins balance should be appropriately set for payer in third-party transfer");
 
        // Account 1 should have a zero allowance now.
 
