@@ -19,7 +19,7 @@ contract TutorialCoin is Ownable, StandardToken {
   using SafeMath for uint256;
 
   // Expected of ERC20
-  string public constant name     = "TutoritalCoin";
+  string public constant name     = "TutorialCoin";
   string public constant symbol   = "TUT";
   uint8  public constant decimals = 18;
 
