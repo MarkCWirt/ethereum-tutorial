@@ -108,4 +108,10 @@ use it.
 Next Steps
 ----------
 
-* Installing the Software
+* `Installing the Software <documentation/software>`__.
+* `Creating a Project <documentation/creating>`__.
+* The TutorialCoin `contract <documentation/contract>`__.
+* `Testing the code <documentation/testing>`__.
+* Using parity to `deploy a contract <documentation/deploy>`__.
+* `Interacting <documentation/interact>`__ with the contract.
+* `Publishing <documentation/publish>`__ source code.
