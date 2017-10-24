@@ -3,7 +3,7 @@ Interacting with a Smart Contract
 
 To interact with a smart contract, one needs the contract's address and
 its `Application Binary Interface <https://solidity.readthedocs.io/en/develop/abi-spec.html>`__,
-which is a JSON document that describes the interface into the contract. As you
+which is a machine-parsable document that describes the interface into the contract. As you
 deployed the contract yourself via parity you already have those. If you were to share the
 contract with other, you would need to share those data items.
 
@@ -16,9 +16,9 @@ share the ABI, it would probably be easiest to compile the ABI directly:
 
 will create an ABI file for each contract in the source file, or referenced in the
 source file. In this case one would share ``TutoeialCoin.abi``, along with the
-address of the deploye contract.)
+address of the deployed contract.)
 
-For this demonstration, we'll mint 100,000 coins and transfer 50,000 of them to
+For this tutorial, we'll mint 100,000 coins and transfer 50,000 of them to
 a different address. But first:
 
 Understanding ``decimals``
@@ -40,7 +40,7 @@ need a balance of:
 
   1,000,000,000,000,000,000
 
-which is a bit number. But remember the ERC20 standard?
+which is a *big* number. But remember the ERC20 standard?
 
 .. code::
 

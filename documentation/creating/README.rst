@@ -27,7 +27,7 @@ This will create severl directories and files:
   ``1_initial_migration.js`` can be used as is.
 
   You'll need to edit ``2_deploy_contracts.js`` for your own purposes. In this
-  tutorial the code we created in called ``TutorialCoin``, so the file
+  tutorial the code we created is called ``TutorialCoin``, so the file
   looks like:
 
   .. code:: javascript
@@ -55,7 +55,8 @@ would begin with something like:
 * Create your code in ``contracts``.
 * Modify ``2_deploy_contracts.js`` is ``migrations`` to reference the code
   you've developed.
-* Place your tests in the ``test`` directory.
+* Remove the pre-populated tests that truffle creates and place your
+  tests in the ``test`` directory.
 
 Next
 ----

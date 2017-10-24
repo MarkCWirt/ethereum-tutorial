@@ -32,7 +32,7 @@ Node.js and NPM
 
 The solidity development environment is largely ECMAScript- based, so you'll want to
 have a recent version of `Node.js <https://nodejs.org/en/>`__ installed, along with
-a recent version of the node package manager. This is important: some of the
+a recent version of the node package manager (``npm``). This is important: some of the
 package dependencies will not install properly with older versions. So, if you're
 using an operating system that tends to be a little "stale" (like Ubuntu LTS),
 you'll probably want to install more recent versions than those that are provided
@@ -76,6 +76,8 @@ I have found the `parity client <https://parity.io/>`__ to me the most reliable
 right now. It can run natively under MacOS (installable with ``homebrew``) and
 Linux. It can also be run in a ``docker`` container, if you prefer working that
 way.
+
+Some note on installing and running parity are given in the next section.
 
 ------
 

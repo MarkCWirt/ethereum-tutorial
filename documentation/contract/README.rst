@@ -33,10 +33,10 @@ The standard itself defines a few functions that must be implemented:
 There are six functions and two events defined in the standard:
 
 * ``totalSupply()``: Returns the total supply of the token
-* ``balanceOf()``: Returns an addresses balance.
+* ``balanceOf()``: Returns the balance or an address.
 * ``transfer()``: Transfer a token from one address to another.
-* ``transferFrom()``: A third-party transfer (an account transfers) tokens
-  between two other addresses.
+* ``transferFrom()``: A third-party transfer (an account transfers tokens
+  between two other addresses).
 * ``approve()``: : The function used to approve a third-party transfer via
   ``transferFrom()``.
 * ``allowance()``: Returns the approved limit for third-party transfers.
@@ -139,11 +139,11 @@ Open Zeppelin also includes ERC20 compliance. It include an interface
 (``ERC20Basic.sol``) and implementation (``BasicToken.sol``) for a simplified
 API (which does not include third-party transfers), as well as an interface
 (``ERC20.sol``) and implementation (``StandardToken.sol``) which includes
-full ERC20 compliance. Since we want full cimpliance, we'll derive our
+full ERC20 compliance. Since we want full compliance, we'll derive our
 token fro ``StandardToken.sol``.
 
 (The standard token actually includes some additional functionality, allowing
-third-part allowances to be increased and decreased, but we'll not really say
+third-party allowances to be increased and decreased, but we'll not really say
 much about that in this tutorial.)
 
 Mintable

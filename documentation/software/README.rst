@@ -5,13 +5,14 @@ There is some software that you will need to install:
 
 * The main development node/javascript packages
 * The parity ethereum client
-* The ``solc`` compiler
-* A Solidity flattener (optional).
+* The ``solc`` compiler (optional)
+* A Solidity flattener (optional)
 
 Javascript Packages
 -------------------
 
-The core software components can be installed simply through ``npm``:
+The core software components can be installed simply by ``npm``
+in the root directory of the repository:
 
 .. code:: bash
 

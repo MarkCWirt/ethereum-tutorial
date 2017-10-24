@@ -2,7 +2,7 @@ Deploying to a Public Network
 =============================
 
 Note: it is assumed that you have already installed parity and have synchronized to
-the ethereum test network as described in the ``software <../software>`` section of
+the ethereum test network as described in the `software <../software>`__ section of
 the tutorial. Additionally, you should have already gotten some test ether as described
 there.
 
@@ -17,7 +17,8 @@ Compiling the Code
 
 Once you have working, tested, debugged code you'll want to deploy it to the testing
 network. But first you'll need to compile it. There are several ways of doing this, but
-for this tutorial I'll use the ``solc`` compiler.
+for this tutorial we'll use the ``solc`` compiler. (Notes for compiling with
+``solcjs`` are below.)
 
 Support of import statements is a little fragile in the Solidity compilers. Truffle
 expects a certain convention (and the code in this tutorial follows that convention),
@@ -46,13 +47,14 @@ contents of ``combined.json`` and provide a few values for the deployment.
 
 A few things to note:
 
-* The output of ``solc`` was pasted into the combined-output/abu box. Parity automatically
+* The output of ``solc`` was pasted into the combined-output/ABI box. Parity automatically
   broke the binary out and placed in the correct place.
 * When using the combined output make sure to choose the correct contract under
   "Select a contract". All of the dependencies will also be listed there. Make sure to
-  choose the correct, top-level contract.
+  choose the correct, top-level contract (in this case
+  ``TutorialCoin.sol:TutorialCoin``).
 
-After you ``Create`` you will be taken to a screen to approve the deployment from the
+After you choose ``create`` you will be taken to a screen to approve the deployment from the
 account that was specified. After you've done this, in a few minutes (or seconds)
 the contract should be deployed. Upon success the contract should show up on the
 contracts page:
@@ -65,9 +67,14 @@ deployment address, you can see the activity associate with the contract:
 
 .. image:: rop1.png
 
-If for some reason the deployment fails, you will probably have to up the gas limit
+**If for some reason the deployment fails:** you will probably have to up the gas limit
 on the transaction. For a first time deployment parity may default to 21,000 gas, which
-may or may not be enough.
+may or may not be enough. When deploying a contract one can chose "Edit Conditions/Gas/Gas
+Price" from the confirmation screen an adjust the gas used for the transaction:
+
+.. image:: gas.png
+
+After viewing or editing you can choose "View Transaction" and continue the deployment.
 
 Compiling with ``solcjs``
 -------------------------
