@@ -55,7 +55,9 @@ Additionally, there are a few data items defined in the standard:
   uint8 public constant decimals = 18;  // 18 is the most common
 
 (Solidity does not do floating point, so ``decimals`` is used for that purpose.
-When set to 18, for example, the balances will be divided by 10^18 to convert.)
+When set to 18, for example, the balances will be divided by 10^18 to convert
+from an integer to a fractional value. One half of 10^18 -- 500,000,000,000,000,000 --
+is 1/2 of a token, by convention.)
 
 Ownable
 .......
@@ -167,7 +169,7 @@ The Contract Proper
 Given the functionality that Open Zeppelin provides, the actual code for
 the contract is pretty straight-forward.
 
-* Include the StandardTOken and Ownable interface/implementation.
+* Include the StandardToken and Ownable interface/implementation.
 * Set our data items (name, symbol, decimals).
 * Create a ``mintTokens()`` function that only the owner of the contract
   can execute.
