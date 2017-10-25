@@ -100,7 +100,7 @@ The Solidity Flattener
 
 There is an open-source `flattener <https://github.com/BlockCatIO/solidity-flattener>`__
 that you can use to combine all of your source files into a single file. This file
-can be submitted to `ethscan.io <https://ethscan.io>`__ (and perhaps other
+can be submitted to `etherscan.io <https://etherscan.io>`__ (and perhaps other
 places) so that people can read the source associated with the smart contracts
 you deploy.
 
