@@ -55,16 +55,12 @@ which is working, and the installed cryptographic libraries include:
 
 .. code::
 
-  i A libcryptopp-dev                 - General purpose cryptographic library - C+
-  i   libcryptsetup4                  - disk encryption support - shared library
-  i   libgcrypt20                     - LGPL Crypto library - runtime library
-  i A libhcrypto4-heimdal             - Heimdal Kerberos - crypto library
+  i   libcrypto++-dev                 - General purpose cryptographic library - C+
+  i A libcrypto++9v5                  - General purpose cryptographic library - sh
+  i   libgcrypt20                     - LGPL Crypto library - runtime library     
+  i A libhcrypto4-heimdal             - Heimdal Kerberos - crypto library         
   i A libk5crypto3                    - MIT Kerberos runtime libraries - Crypto Li
-  i A libssh-gcrypt-4                 - tiny C SSH library (gcrypt flavor)
-  i   libgnutls-openssl27             - GNU TLS library - OpenSSL wrapper
-  i   libssl-dev                      - Secure Sockets Layer toolkit - development
-  i   libssl1.0.0                     - Secure Sockets Layer toolkit - shared libr
-  i   openssl                         - Secure Sockets Layer toolkit - cryptograph
+  i A libssh-gcrypt-4                 - tiny C SSH library (gcrypt flavor) 
 
 If you run into problems, you may want to examine your libraries and add some of the
 above.
