@@ -22,12 +22,18 @@ for this tutorial we'll use the ``solc`` compiler. (Notes for compiling with
 
 Support of import statements is a little fragile in the Solidity compilers. Truffle
 expects a certain convention (and the code in this tutorial follows that convention),
-but ``solc`` and/or ``solcjs`` don't necessarily follow it by default. So we'll be
-adopting the following:
+but ``solc`` and/or ``solcjs`` don't necessarily follow it by default.
 
-* Copying the source code to the ``node_modules`` directory.
-* Using the ``solc`` compiler
-* Creating a combined ABI/bin file for deployment.
+There are two ways that we can compile our contact successfully with the
+Open Zeppelin dependencies: we can copy the contract to the ``node_modules``
+directory and compile from there, or we can specify where the Zeppelin files
+are on the command line.
+
+For the first way, we'll:
+
+* Copy the source code to the ``node_modules`` directory.
+* Use the ``solc`` compiler
+* Create a combined ABI/bin file for deployment.
 
 Assuming that we're in the ``node_modules`` directory:
 
@@ -39,6 +45,24 @@ Assuming that we're in the ``node_modules`` directory:
 will create a file, ``combined.json`` that can be used to deploy the contract. This file
 contains both the application binary interface and the byte code in a format that
 parity will understand.
+
+Secondly, we can compile directly from the ``contract`` directory, but if we
+do that we'll need to tell the compiler where to find our dependencies, and
+we'll have to use *absolute* paths to do so (relative paths are not understood).
+So to compile as in the above, but without copying the code, in my particular
+environment I can do it with:
+
+.. code:: bash
+
+  solc -o . \
+    --combined-json bin,abi \
+    zeppelin-solidity=/home/vagrant/Personal/ethereum/node_modules/zeppelin-solidity \
+    TutorialCoin.sol
+
+You will need to use the path that is correct for your environment.
+
+Once you have produced the combined JSON file (by either means) you will need to
+input it into the parity interface.
 
 If you go to Contracts-> Deploy you'll be met with a screen in which you can paste the
 contents of ``combined.json`` and provide a few values for the deployment.
